@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Meba.LoginPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="hi"
+    Padding="30,0,30,18"
+    BackgroundColor="White">
+    <StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
+        <Image
+            Aspect="AspectFit"
+            HeightRequest="200"
+            HorizontalOptions="Center"
+            Source="logo.png" />
+        <Label
+            FontAttributes="Bold"
+            FontSize="18"
+            HorizontalOptions="Center"
+            Text="צור את הפרופיל שלך"
+            TextColor="#445a82"
+            TranslationY="-7" />
+        <AbsoluteLayout
+            Margin="0,10,0,0"
+            HeightRequest="50"
+            HorizontalOptions="FillAndExpand">
+            <Button
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                BackgroundColor="#445a82" />
+            <Image
+                Margin="4"
+                AbsoluteLayout.LayoutBounds="0,0.5,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                Aspect="AspectFit"
+                InputTransparent="True"
+                Source="facebook" />
+        </AbsoluteLayout>
+        <!--<Button Image="facebook.png" HorizontalOptions="FillAndExpand"  BackgroundColor="#445a82" HeightRequest="70"></Button>-->
+        <Grid
+            Margin="5,7,5,9"
+            HeightRequest="40"
+            HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <BoxView
+                Grid.Row="0"
+                Grid.Column="0"
+                HeightRequest="1"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Color="#0060d2" />
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="18"
+                Text="או"
+                TextColor="#0060d2"
+                VerticalOptions="Center" />
+            <BoxView
+                Grid.Row="0"
+                Grid.Column="2"
+                HeightRequest="1"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Color="#0060d2" />
+        </Grid>
+        <ContentView
+            Margin="5,0,5,15"
+            Padding="10,10,10,5"
+            BackgroundColor="#f5ad02">
+            <Entry
+                HorizontalTextAlignment="End"
+                Placeholder="שם"
+                PlaceholderColor="White"
+                TextColor="White" />
+        </ContentView>
+        <ContentView VerticalOptions="FillAndExpand">
+            <AbsoluteLayout
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End">
+                <Button
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    BackgroundColor="#0060d2"
+                    Clicked="Button_OnClicked" />
+                <Image
+                    Margin="11"
+                    AbsoluteLayout.LayoutBounds="0,0.5,1,1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    Aspect="AspectFit"
+                    InputTransparent="True"
+                    Source="done" />
+            </AbsoluteLayout>
+        </ContentView>
+    </StackLayout>
+</ContentPage>

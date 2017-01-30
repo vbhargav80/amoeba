@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Meba.EnterPhone"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:meba="clr-namespace:Meba;assembly=Meba.Droid"
+    BackgroundColor="White">
+    <StackLayout
+        HorizontalOptions="FillAndExpand"
+        Spacing="0"
+        VerticalOptions="FillAndExpand">
+        <StackLayout
+            BackgroundColor="#066bdb"
+            HeightRequest="44"
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal">
+            <BoxView HorizontalOptions="StartAndExpand" />
+            <Label
+                FontSize="18"
+                HorizontalOptions="End"
+                Text="הרשמה"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Image
+                x:Name="Back"
+                Margin="4,0,10,0"
+                Aspect="AspectFit"
+                HeightRequest="34"
+                HorizontalOptions="End"
+                Source="back"
+                VerticalOptions="Center"
+                WidthRequest="34" />
+        </StackLayout>
+
+        <Image
+            Aspect="AspectFit"
+            HeightRequest="200"
+            Source="logo"
+            WidthRequest="200" />
+        <Grid
+            Margin="20,0,20,20"
+            Padding="20,30,20,30"
+            BackgroundColor="#f5ad02"
+            HeightRequest="110"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <AbsoluteLayout
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="6,0,0,0"
+                BackgroundColor="White">
+                <Label
+                    Margin="10,0,0,0"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text="IL +972"
+                    TextColor="Black"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center" />
+                <Image
+                    AbsoluteLayout.LayoutBounds="1,1,14,14"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Aspect="AspectFit"
+                    HeightRequest="14"
+                    Source="phone_code"
+                    WidthRequest="14" />
+            </AbsoluteLayout>
+            <ContentView
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="0,0,6,0"
+                BackgroundColor="White">
+                <Entry
+                    Margin="10,0,0,0"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Mobile Number"
+                    PlaceholderColor="Gray"
+                    TextColor="Black"
+                    VerticalOptions="CenterAndExpand" />
+            </ContentView>
+            <AbsoluteLayout
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2">
+                <Button
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    BackgroundColor="#0060d2" />
+                <Image
+                    Margin="8"
+                    AbsoluteLayout.LayoutBounds="0,0.5,1,1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    Aspect="AspectFit"
+                    InputTransparent="True"
+                    Source="done" />
+            </AbsoluteLayout>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>
